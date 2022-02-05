@@ -1,8 +1,9 @@
-import PaginationBar from "./components/PaginationBar.js";
-import Header from "./components/Header.js";
 import React from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PaginationBar from "./components/PaginationBar.jsx";
+import Header from "./components/Header.jsx";
+import ActivityList from "./components/ActivityList.jsx";
+import ActivityDetail from "./components/ActivityDetail.jsx";
 
 function App() {
   return (
@@ -10,7 +11,10 @@ function App() {
       <div className="container">
         <Header />
         <div className="container-view">
-          <Routes></Routes>
+          <Routes>
+            <Route path="/" exact element={<ActivityList />} />
+            <Route path="/activities/:id" element={<ActivityDetail />} />
+          </Routes>
         </div>
       </div>
     </Router>
