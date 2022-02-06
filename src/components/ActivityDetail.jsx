@@ -18,9 +18,18 @@ const ActivityDetail = () => {
       });
   }, []);
 
+  const items = [];
+  Object.entries(activity).forEach(([key, value]) => {
+    items.push(
+      <li className="list-group-item" key={key}>
+        {key}: {value}
+      </li>
+    );
+  });
+
   return (
     <React.Fragment>
-      <h1>{activity.from}</h1>
+      <ul className="list-group">{items}</ul>
     </React.Fragment>
   );
 };

@@ -8,10 +8,17 @@ const ActivityPreview = ({ activity, handleArchive }) => {
       as="li"
       className="d-flex justify-content-between align-items-start my-2"
     >
-      <Link to={`/activities/${activity.id}`}>
-        <div className="ms-2 me-auto">
-          <div className="fw-bold">{activity.via}</div>
-          Cras justo odio
+      <Link
+        to={`/activities/${activity.id}`}
+        style={{ textDecoration: "none" }}
+      >
+        <div className="pt-3">
+          {activity.direction === "inbound" && (
+            <h3 className="text-dark">{"From: " + activity.from}</h3>
+          )}
+          {activity.direction === "outbound" && (
+            <h3 className="text-dark">{"To: " + activity.to}</h3>
+          )}
         </div>
       </Link>
       <Button
