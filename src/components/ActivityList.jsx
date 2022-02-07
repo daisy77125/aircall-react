@@ -26,7 +26,7 @@ const ActivityList = ({
   );
 
   return (
-    <div>
+    <>
       {showResetButton && (
         <Button
           variant="light"
@@ -52,7 +52,7 @@ const ActivityList = ({
         currentPage={currentPage}
         paginate={paginate}
       />
-    </div>
+    </>
   );
 };
 

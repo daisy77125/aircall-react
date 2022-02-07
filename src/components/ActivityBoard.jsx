@@ -7,7 +7,7 @@ const ActivityBoard = () => {
   const [activities, setActivities] = useState([]);
 
   const apiUrl = "https://aircall-job.herokuapp.com";
-  const pageSize = 4;
+  const pageSize = 5;
 
   useEffect(() => {
     axios

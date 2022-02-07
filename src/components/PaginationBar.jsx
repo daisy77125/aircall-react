@@ -7,7 +7,7 @@ const PaginationBar = ({ totalPageCount, currentPage, paginate }) => {
   }
 
   return (
-    <nav>
+    <nav className="position-absolute mb-3 bottom-0 start-50 translate-middle-x">
       <ul className="pagination justify-content-center">
         {pageNumbers.map((number) => {
           let listClass = "page-item";
